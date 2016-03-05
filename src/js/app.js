@@ -70,7 +70,7 @@ var MainViewController = React.createClass({
 // Tab Controller
 // ------------------------------
 
-var lastSelectedTab = 'celebrities';
+var lastSelectedTab = localStorage.lastSelectedTab || 'celebrities';
 
 var TabViewController = React.createClass({
 	getInitialState () {
@@ -80,7 +80,8 @@ var TabViewController = React.createClass({
 	},
 
 	onViewChange (nextView) {
-		lastSelectedTab = nextView
+		lastSelectedTab = nextView;
+		localStorage.lastSelectedTab = lastSelectedTab;
 
 		this.setState({
 			selectedTab: nextView
@@ -103,9 +104,9 @@ var TabViewController = React.createClass({
 	render () {
 		return (
 			<Container>
-				<ViewManager ref="vm" name="tabs" defaultView="celebrities" onViewChange={this.onViewChange}>
+				<ViewManager ref="vm" name="tabs" defaultView={lastSelectedTab} onViewChange={this.onViewChange}>
 					<View name="celebrities" component={require('./views/celebrities')} />
-					<View name="diet" component={require('./views/diet')} />
+					<View name="celebrity" component={require('./views/celebrity')} />
 				</ViewManager>
 			</Container>
 		);

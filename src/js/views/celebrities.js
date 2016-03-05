@@ -14,23 +14,23 @@ module.exports = React.createClass({
   },
 
   renderCelebrity: function (celebrity, index) {
-    return (<Link to="tabs:diet" transition="show-from-right" key={index}>
-      <UI.Item showDisclosureArrow>
-        <UI.ItemInner>
-          {celebrity.name}
-        </UI.ItemInner>
-      </UI.Item>
-    </Link>)
+    return (
+      <div className="celebrities-item">
+        <Link to="tabs:celebrity" transition="show-from-right" key={index} viewProps={{ celebrity: celebrity }}>
+          <UI.Item showDisclosureArrow>
+            <div className="cover-photo" style={{"background-image" : `url(${celebrity.coverPhoto})`}}>
+              <div className="name">{celebrity.name}</div>
+            </div>
+          </UI.Item>
+        </Link>
+    </div>
+        )
   },
 
   render: function () {
     return (
-      <Container scrollable>
-        <UI.Group>
-          <UI.GroupBody>
-            {data.celebrities.map((celebrity, index) => this.renderCelebrity(celebrity, index))}
-          </UI.GroupBody>
-        </UI.Group>
+      <Container scrollable className="celebrities">
+        {data.celebrities.map((celebrity, index) => this.renderCelebrity(celebrity, index))}
       </Container>
     );
   }
