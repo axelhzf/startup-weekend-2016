@@ -70,7 +70,8 @@ var MainViewController = React.createClass({
 // Tab Controller
 // ------------------------------
 
-var lastSelectedTab = 'lists'
+var lastSelectedTab = 'celebrities';
+
 var TabViewController = React.createClass({
 	getInitialState () {
 		return {
@@ -100,47 +101,12 @@ var TabViewController = React.createClass({
 	},
 
 	render () {
-		let selectedTab = this.state.selectedTab
-		let selectedTabSpan = selectedTab
-
-		if (selectedTab === 'lists' || selectedTab === 'list-simple' || selectedTab === 'list-complex' || selectedTab === 'list-details') {
-			selectedTabSpan = 'lists';
-		}
-
-		if (selectedTab === 'transitions' || selectedTab === 'transitions-target') {
-			selectedTabSpan = 'transitions';
-		}
-
 		return (
 			<Container>
-				<ViewManager ref="vm" name="tabs" defaultView={selectedTab} onViewChange={this.onViewChange}>
-					<View name="lists" component={require('./views/lists')} />
-					<View name="list-simple" component={require('./views/list-simple')} />
-					<View name="list-complex" component={require('./views/list-complex')} />
-					<View name="list-details" component={require('./views/list-details')} />
-					<View name="form" component={require('./views/form')} />
-					<View name="controls" component={require('./views/controls')} />
-					<View name="transitions" component={require('./views/transitions')} />
-					<View name="transitions-target" component={require('./views/transitions-target')} />
+				<ViewManager ref="vm" name="tabs" defaultView="celebrities" onViewChange={this.onViewChange}>
+					<View name="celebrities" component={require('./views/celebrities')} />
+					<View name="diet" component={require('./views/diet')} />
 				</ViewManager>
-				<UI.Tabs.Navigator>
-					<UI.Tabs.Tab onTap={this.selectTab.bind(this, 'lists')} selected={selectedTabSpan === 'lists'}>
-						<span className="Tabs-Icon Tabs-Icon--lists" />
-						<UI.Tabs.Label>Lists</UI.Tabs.Label>
-					</UI.Tabs.Tab>
-					<UI.Tabs.Tab onTap={this.selectTab.bind(this, 'form')} selected={selectedTabSpan === 'form'}>
-						<span className="Tabs-Icon Tabs-Icon--forms" />
-						<UI.Tabs.Label>Forms</UI.Tabs.Label>
-					</UI.Tabs.Tab>
-					<UI.Tabs.Tab onTap={this.selectTab.bind(this, 'controls')} selected={selectedTabSpan === 'controls'}>
-						<span className="Tabs-Icon Tabs-Icon--controls" />
-						<UI.Tabs.Label>Controls</UI.Tabs.Label>
-					</UI.Tabs.Tab>
-					<UI.Tabs.Tab onTap={this.selectTab.bind(this, 'transitions')} selected={selectedTabSpan === 'transitions'}>
-						<span className="Tabs-Icon Tabs-Icon--transitions" />
-						<UI.Tabs.Label>Transitions</UI.Tabs.Label>
-					</UI.Tabs.Tab>
-				</UI.Tabs.Navigator>
 			</Container>
 		);
 	}
