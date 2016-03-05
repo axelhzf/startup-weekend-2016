@@ -2,6 +2,7 @@ import Container from 'react-container';
 import React from 'react';
 import { Link, UI } from 'touchstonejs';
 const data = require("../../data/data");
+var PieChart = require('react-d3').PieChart;
 
 module.exports = React.createClass({
 	statics: {
@@ -55,7 +56,14 @@ module.exports = React.createClass({
 					<UI.GroupHeader>Nutritional summary</UI.GroupHeader>
 					<UI.GroupBody>
 						<UI.GroupInner>
-
+							<PieChart
+								data={diet.nutritionalSummary}
+								width={350}
+								height={350}
+								radius={70}
+								innerRadius={10}
+								sectorBorderColor="white"
+							/>
 						</UI.GroupInner>
 					</UI.GroupBody>
 
