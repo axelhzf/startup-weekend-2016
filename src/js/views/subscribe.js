@@ -21,7 +21,7 @@ module.exports = React.createClass({
     return (
       <Container scrollable className="subscribe">
         <h1>Premium</h1>
-        <h2>0,78€/mo</h2>
+        <h2>0,79€/mo</h2>
 
         <UI.GroupInner>
           <p>What kind of demonic pact did these celebrities to get this sexy body ?</p>
