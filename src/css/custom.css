@@ -228,3 +228,11 @@
     color: #fff;
     text-align: center;
 }
+
+.rd3-basic-chart {
+    text-align: center;
+}
+
+.rd3-piechart-label, .rd3-piechart-value {
+    font-size: 12px;
+}
