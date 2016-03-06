@@ -18,6 +18,18 @@
     background-position: center center;
 }
 
+.celebrities-item .premium-badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 12px;
+    background-color: #CA2F7E;
+    padding: 4px;
+    font-weight: bold;
+}
+
 .name {
     position: absolute;
     bottom: 5px;

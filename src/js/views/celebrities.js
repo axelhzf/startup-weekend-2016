@@ -14,12 +14,18 @@ module.exports = React.createClass({
   },
 
   renderCelebrity: function (celebrity, index) {
+
+    const linkToParams = celebrity.premium ?
+    {to: "tabs:subscribe", transition: "show-from-right"}:
+    {to: "tabs:celebrity", transition: "show-from-right", viewProps:{celebrity}};
+
     return (
       <div className="celebrities-item" key={index}>
-        <Link to="tabs:celebrity" transition="show-from-right" key={index} viewProps={{ celebrity }}>
+        <Link {...linkToParams}>
           <UI.Item showDisclosureArrow>
             <div className="cover-photo" style={{backgroundImage : `url(img/data/${celebrity.coverPhoto})`}}>
               <div className="name">{celebrity.name}</div>
+              {celebrity.premium? <div className="premium-badge">Premium</div> : ""}
             </div>
           </UI.Item>
         </Link>

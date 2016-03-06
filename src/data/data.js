@@ -1448,7 +1448,11 @@ module.exports = {
           "5 Bananas"
         ]
       }
-    }
+    },
+    {"name": "Elsa Pataky", coverPhoto: "elsa.jpg", premium: true},
+    {"name": "Karmele", coverPhoto: "karmele.jpg", premium: true},
+    {"name": "Sara Carbonero", coverPhoto: "saracarbonero.jpg", premium: true},
+    {"name": "Scarlett Johansson", coverPhoto: "scarlett.jpg", premium: true}
 
   ]
 };
