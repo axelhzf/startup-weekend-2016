@@ -657,3 +657,7 @@ footer {
 		max-width: 100%;
 	}
 }
+
+.static-phone {
+	right: 30px;
+}
