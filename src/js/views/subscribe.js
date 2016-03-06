@@ -21,6 +21,12 @@ module.exports = React.createClass({
     return (
       <Container scrollable className="subscribe">
         <h1>Premium</h1>
+        <h2>0,99/diet</h2>
+
+        <p>asfasdfasdf.....</p>
+
+        <UI.Button type="primary">Buy</UI.Button>
+
       </Container>
     );
   }

@@ -204,3 +204,9 @@
 .shopping-list li:last-child {
     border-bottom: none;
 }
+
+.subscribe {
+    background-image: linear-gradient(135deg, #c3299c, #c3292c);
+    color: #fff;
+    text-align: center;
+}
