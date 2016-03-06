@@ -53,7 +53,9 @@ var App = React.createClass({
 // Main Controller
 // ------------------------------
 
+//var lastSelectedTab = localStorage.lastSelectedTab || 'celebrities';
 var lastSelectedTab = 'celebrities';
+
 var MainViewController = React.createClass({
 
   onViewChange (nextView) {

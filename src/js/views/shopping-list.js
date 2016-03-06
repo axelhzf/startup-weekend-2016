@@ -12,7 +12,7 @@ module.exports = React.createClass({
         title: "Shopping list",
         leftLabel: 'Recipes',
         leftArrow: true,
-        leftAction: () => { app.transitionTo('tabs:celebrity', { transition: 'reveal-from-right', viewProps: {celebrity: props.celebrity } }) },
+        leftAction: () => { app.transitionTo('tabs:recipes', { transition: 'reveal-from-right', viewProps: {celebrity: props.celebrity } }) },
       }
     }
   },
