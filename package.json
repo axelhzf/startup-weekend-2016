@@ -36,7 +36,8 @@
     "lint": "happiness",
     "test": "npm run lint",
     "start": "gulp clean && gulp dev",
-    "watch": "gulp clean && gulp watch"
+    "watch": "gulp clean && gulp watch",
+    "deploy": "cd gh-pages && git init && git commit --allow-empty -m 'update web' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'update demo' && git push git@github.com:axelhzf/startup-weekened-2016 gh-pages --force && cd .."
   },
   "happiness": {
     "ignore": [
