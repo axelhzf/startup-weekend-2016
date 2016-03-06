@@ -21,9 +21,16 @@ module.exports = React.createClass({
     return (
       <Container scrollable className="subscribe">
         <h1>Premium</h1>
-        <h2>0,99/diet</h2>
+        <h2>0,78€/mo</h2>
 
-        <p>asfasdfasdf.....</p>
+        <UI.GroupInner>
+          <p>What kind of demonic pact did these celebrities to get this sexy body ?</p>
+
+          <p>Get the changes made in theirs eating habits and Smile with ours innocent gags !<br/>
+          Get exclusive weekly updates and performs especially effective diets .</p>
+
+          <p>Stop wasting the time and unlock all available content just for 0.79 € per month , and be aware of some details that you can get :) .</p>
+        </UI.GroupInner>
 
         <UI.Button type="primary">Buy</UI.Button>
 
