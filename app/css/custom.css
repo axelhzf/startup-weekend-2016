@@ -1,0 +1,230 @@
+.celebrities {
+
+}
+
+.celebrities-item {
+
+}
+
+.celebrities-item .Item {
+    padding: 0;
+}
+
+.celebrities-item .cover-photo {
+    background-size: cover;
+    height: 150px;
+    width: 100%;
+    position: relative;
+    background-position: center center;
+}
+
+.celebrities-item .premium-badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 12px;
+    background-color: #CA2F7E;
+    padding: 4px;
+    font-weight: bold;
+}
+
+.name {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+
+.celebrity {
+
+}
+
+.celebrity-header {
+    background-size: cover;
+    height: 150px;
+    width: 100%;
+    position: relative;
+    background-position: center center;
+}
+
+.celebrity-header .fade {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    padding-top: 50px
+}
+
+.celebrity-header .diet-name {
+    font-size: 24px;
+    color: #fff;
+    border: 1px solid #fff;
+    display: inline;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.celebrity .Group__header {
+    padding-top: 10px;
+}
+
+.recipes .celebrity-header .fade {
+    padding-top: 40px
+}
+
+.recipes .celebrity-header .diet-name-container {
+    margin-bottom: 22px;
+}
+
+.recipes .diet-day {
+    font-size: 24px;
+    color: #fff;
+    border: 1px solid #fff;
+    display: inline;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.recipes .recipe-item {
+    background-size: cover;
+    height: 150px;
+    width: 100%;
+    position: relative;
+    background-position: center center;
+}
+
+.recipes .recipe-name {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 7px 10px 0 10px;
+    text-transform: capitalize;
+}
+
+.recipes .recipe-dislike {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: #CA2F7E;
+    padding: 5px 10px;
+    color: #fff;
+    text-transform: uppercase;
+    opacity: 0.8;
+    z-index: 1000;
+}
+
+.recipes .Item {
+    padding: 0;
+}
+
+.recipes .Item--has-disclosure-arrow::after {
+    color: #fff;
+}
+
+
+.recipe {
+}
+
+.recipe .recipe-header {
+    background-size: cover;
+    height: 150px;
+    width: 100%;
+    position: relative;
+    background-position: center center;
+}
+
+.recipe .recipe-name {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 7px 10px 0 10px;
+}
+
+.recipe .Group__header {
+    padding-top: 10px;
+}
+
+.recipe ul {
+    padding: 0;
+    margin: 0;
+}
+
+.recipe li {
+    list-style: none;
+    border-bottom: 1px solid #ccc;
+    padding: 7px 0;
+}
+
+.recipe li:last-child {
+    border-bottom: none;
+}
+
+
+.shopping-list .celebrity-header {
+    background-size: cover;
+    height: 150px;
+    width: 100%;
+    position: relative;
+    background-position: center center;
+}
+
+.shopping-list .fade {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    padding-top: 50px
+}
+
+.shopping-list .diet-name {
+    font-size: 24px;
+    color: #fff;
+    border: 1px solid #fff;
+    display: inline;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.shopping-list ul {
+    padding: 0;
+    margin: 0;
+}
+
+.shopping-list li {
+    list-style: none;
+    border-bottom: 1px solid #ccc;
+    padding: 7px 0;
+}
+
+.shopping-list li:last-child {
+    border-bottom: none;
+}
+
+.subscribe {
+    background-image: linear-gradient(135deg, #c3299c, #c3292c);
+    color: #fff;
+    text-align: center;
+}
