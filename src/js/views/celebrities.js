@@ -15,10 +15,10 @@ module.exports = React.createClass({
 
   renderCelebrity: function (celebrity, index) {
     return (
-      <div className="celebrities-item">
+      <div className="celebrities-item" key={index}>
         <Link to="tabs:celebrity" transition="show-from-right" key={index} viewProps={{ celebrity: celebrity }}>
           <UI.Item showDisclosureArrow>
-            <div className="cover-photo" style={{"background-image" : `url(${celebrity.coverPhoto})`}}>
+            <div className="cover-photo" style={{backgroundImage : `url(img/data/${celebrity.coverPhoto})`}}>
               <div className="name">{celebrity.name}</div>
             </div>
           </UI.Item>

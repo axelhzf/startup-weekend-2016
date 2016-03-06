@@ -7,7 +7,7 @@ var PieChart = require('react-d3').PieChart;
 module.exports = React.createClass({
 	statics: {
 		navigationBar: 'main',
-		getNavigation (props, app, filterStarred) {
+		getNavigation (props, app) {
 			return {
 				title: "Diet",
 				leftLabel: 'Celebrities',
@@ -32,7 +32,7 @@ module.exports = React.createClass({
 		const diet = celebrity.diet;
 		return (
 			<Container scrollable className="celebrity">
-				<div className="celebrity-header" style={{"background-image": `url(${celebrity.coverPhoto})`}}>
+				<div className="celebrity-header" style={{"background-image": `url(img/data/${celebrity.coverPhoto})`}}>
 					<div className="fade">
 						<div className="diet-name">{diet.name}</div>
 					</div>
@@ -67,7 +67,7 @@ module.exports = React.createClass({
 						</UI.GroupInner>
 					</UI.GroupBody>
 
-					<Link to="tabs:celebrity" transition="show-from-right" viewProps={{ diet: diet }}>
+					<Link to="tabs:recipes" transition="show-from-right" viewProps={{ diet: diet }}>
 						<UI.Button type="primary">
 							Subscribe to diet
 						</UI.Button>

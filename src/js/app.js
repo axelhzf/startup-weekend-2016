@@ -107,6 +107,8 @@ var TabViewController = React.createClass({
 				<ViewManager ref="vm" name="tabs" defaultView={lastSelectedTab} onViewChange={this.onViewChange}>
 					<View name="celebrities" component={require('./views/celebrities')} />
 					<View name="celebrity" component={require('./views/celebrity')} />
+					<View name="recipes" component={require('./views/recipes')} />
+					<View name="recipe" component={require('./views/recipe')} />
 				</ViewManager>
 			</Container>
 		);
