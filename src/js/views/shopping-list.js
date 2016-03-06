@@ -12,7 +12,7 @@ module.exports = React.createClass({
         title: "Recipe",
         leftLabel: 'Recipes',
         leftArrow: true,
-        leftAction: () => { app.transitionTo('tabs:recipes', { transition: 'reveal-from-right' }) }
+        leftAction: () => { app.transitionTo('tabs:recipes', {transition: 'reveal-from-right'}) }
       }
     }
   },
@@ -31,13 +31,21 @@ module.exports = React.createClass({
           </div>
         </div>
 
-        <UI.GroupBody>
-          <UI.GroupInner>
-            <ul>
-              { shoppingList.map((item, index) => <li key={index}>{item}</li>) }
-            </ul>
-          </UI.GroupInner>
-        </UI.GroupBody>
+        <UI.Group>
+          <UI.GroupBody>
+            <UI.GroupInner>
+              <ul>
+                { shoppingList.map((item, index) => <li key={index}>{item}</li>) }
+              </ul>
+            </UI.GroupInner>
+          </UI.GroupBody>
+        </UI.Group>
+
+        <UI.Group>
+          <UI.Button type="primary">
+            Buy
+          </UI.Button>
+        </UI.Group>
 
       </Container>
     );
