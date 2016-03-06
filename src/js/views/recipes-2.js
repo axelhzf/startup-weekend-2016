@@ -47,7 +47,6 @@ module.exports = React.createClass({
 
     const total = recipes[meal].length;
     const newIndex = (this.state.currentMealIndex[meal] + 1 ) % total;
-    console.log("new index", newIndex);
 
     this.state.currentMealIndex[meal] = newIndex;
     this.setState(this.state.currentMealIndex);
@@ -84,22 +83,22 @@ module.exports = React.createClass({
         <div className="celebrity-header" style={{backgroundImage: `url(img/data/${celebrity.coverPhoto})`}}>
           <div className="fade">
             <div className="diet-name-container"><span className="diet-name">{diet.name}</span></div>
-            <div><span className="diet-day">Day 1</span></div>
+            <div><span className="diet-day">Day 2</span></div>
           </div>
         </div>
 
         <UI.Group>
-            {this.renderRecipe("breakfast", recipes.breakfast[this.state.currentMealIndex.breakfast])}
-            {this.renderRecipe("appetizer", recipes.appetizer[this.state.currentMealIndex.appetizer])}
-            {this.renderRecipe("lunch", recipes.lunch[this.state.currentMealIndex.lunch])}
-            {this.renderRecipe("snack", recipes.snack[this.state.currentMealIndex.snack])}
-            {this.renderRecipe("dinner", recipes.dinner[this.state.currentMealIndex.dinner])}
+          {this.renderRecipe("breakfast", recipes.breakfast[this.state.currentMealIndex.breakfast])}
+          {this.renderRecipe("appetizer", recipes.appetizer[this.state.currentMealIndex.appetizer])}
+          {this.renderRecipe("lunch", recipes.lunch[this.state.currentMealIndex.lunch])}
+          {this.renderRecipe("snack", recipes.snack[this.state.currentMealIndex.snack])}
+          {this.renderRecipe("dinner", recipes.dinner[this.state.currentMealIndex.dinner])}
         </UI.Group>
 
         <UI.Group>
-          <Link to="tabs:recipes-2" transition="show-from-right" viewProps={{ celebrity }}>
+          <Link to="tabs:shopping-list" transition="show-from-right" viewProps={{ celebrity }}>
             <UI.Button type="primary">
-              Next day
+              Shopping List
             </UI.Button>
           </Link>
         </UI.Group>

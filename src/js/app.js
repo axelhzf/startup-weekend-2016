@@ -71,6 +71,7 @@ var MainViewController = React.createClass({
           <View name="celebrities" component={require('./views/celebrities')}/>
           <View name="celebrity" component={require('./views/celebrity')}/>
           <View name="recipes" component={require('./views/recipes')}/>
+          <View name="recipes-2" component={require('./views/recipes-2')}/>
           <View name="recipe" component={require('./views/recipe')}/>
           <View name="shopping-list" component={require('./views/shopping-list')}/>
           <View name="subscribe" component={require('./views/subscribe')}/>

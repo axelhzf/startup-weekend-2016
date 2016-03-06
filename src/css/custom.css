@@ -45,7 +45,7 @@
 
 }
 
-.celebrity .celebrity-header {
+.celebrity-header {
     background-size: cover;
     height: 150px;
     width: 100%;
@@ -76,6 +76,24 @@
 
 .celebrity .Group__header {
     padding-top: 10px;
+}
+
+.recipes .celebrity-header .fade {
+    padding-top: 40px
+}
+
+.recipes .celebrity-header .diet-name-container {
+    margin-bottom: 22px;
+}
+
+.recipes .diet-day {
+    font-size: 24px;
+    color: #fff;
+    border: 1px solid #fff;
+    display: inline;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .recipes .recipe-item {
