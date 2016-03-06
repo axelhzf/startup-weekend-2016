@@ -656,6 +656,10 @@ footer {
 	#logo img {
 		max-width: 100%;
 	}
+
+	#section1 {
+		background-position-y: 0;
+	}
 }
 
 .static-phone {
