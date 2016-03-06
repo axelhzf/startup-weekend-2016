@@ -28,11 +28,11 @@ module.exports = React.createClass({
 	},
 
 	render: function () {
-		const celebrity = data.celebrities[0];
+		const celebrity = this.props.celebrity;
 		const diet = celebrity.diet;
 		return (
 			<Container scrollable className="celebrity">
-				<div className="celebrity-header" style={{"background-image": `url(img/data/${celebrity.coverPhoto})`}}>
+				<div className="celebrity-header" style={{backgroundImage: `url(img/data/${celebrity.coverPhoto})`}}>
 					<div className="fade">
 						<div className="diet-name">{diet.name}</div>
 					</div>
@@ -69,7 +69,7 @@ module.exports = React.createClass({
 				</UI.Group>
 
 				<UI.Group>
-					<Link to="tabs:recipes" transition="show-from-right" viewProps={{ diet: diet }}>
+					<Link to="tabs:recipes" transition="show-from-right" viewProps={{ celebrity }}>
 						<UI.Button type="primary">
 							Subscribe to diet
 						</UI.Button>

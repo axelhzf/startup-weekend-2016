@@ -12,14 +12,15 @@ module.exports = React.createClass({
 				title: "Recipes",
 				leftLabel: 'Celebrity',
 				leftArrow: true,
-				leftAction: () => { app.transitionTo('tabs:celebrity', { transition: 'reveal-from-right' }) },
+				leftAction: () => { app.transitionTo('tabs:celebrity', { transition: 'reveal-from-right', viewProps: {celebrity: props.celebrity } }) },
 			}
 		}
 	},
 
 	renderRecipe: function (meal, recipe) {
+		const celebrity = this.props.celebrity;
 		return (
-			<Link to="tabs:recipe" transition="show-from-right" viewProps={{ recipe }}>
+			<Link to="tabs:recipe" transition="show-from-right" viewProps={{ celebrity, recipe }}>
 				<UI.Item showDisclosureArrow>
 					<div className="recipe-item" style={{backgroundImage: `url(img/data/${recipe.coverPhoto})`}}>
 
@@ -38,7 +39,7 @@ module.exports = React.createClass({
 	},
 
 	render: function () {
-		const celebrity = data.celebrities[0];
+		const celebrity = this.props.celebrity;
 		const diet = celebrity.diet;
 		const recipes = diet.meals;
 
@@ -67,8 +68,6 @@ module.exports = React.createClass({
 						</UI.Button>
 					</Link>
 				</UI.Group>
-
-
 
 			</Container>
 		);

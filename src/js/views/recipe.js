@@ -12,7 +12,7 @@ module.exports = React.createClass({
 				title: "Recipe",
 				leftLabel: 'Recipes',
 				leftArrow: true,
-				leftAction: () => { app.transitionTo('tabs:recipes', { transition: 'reveal-from-right' }) }
+				leftAction: () => { app.transitionTo('tabs:recipes', { transition: 'reveal-from-right', viewProps: {celebrity: props.celebrity } }) },
 			}
 		}
 	},
@@ -38,10 +38,7 @@ module.exports = React.createClass({
 	},
 
 	render: function () {
-		const celebrity = data.celebrities[0];
-		const diet = celebrity.diet;
-		const recipes = diet.meals;
-		const recipe = diet.meals.breakfast[0];
+		const recipe = this.props.recipe;
 
 		return (
 			<Container scrollable className="recipe">

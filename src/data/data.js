@@ -1077,6 +1077,7 @@ module.exports = {
       coverPhoto: "rajoy.jpg",
       description: "Politicos españoles...",
       diet: {
+        name: "Politician Diet",
         description: "La popular dieta del chorizo, también conocida como La Gran Mamandurria es una dieta popularizada por los políticos durante los últimos dos siglos en España.",
         nutritionalSummary: [
           {label: "fats", value: 98},

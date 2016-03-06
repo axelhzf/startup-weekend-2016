@@ -9,18 +9,17 @@ module.exports = React.createClass({
     navigationBar: 'main',
     getNavigation (props, app) {
       return {
-        title: "Recipe",
+        title: "Shopping list",
         leftLabel: 'Recipes',
         leftArrow: true,
-        leftAction: () => { app.transitionTo('tabs:recipes', {transition: 'reveal-from-right'}) }
+        leftAction: () => { app.transitionTo('tabs:celebrity', { transition: 'reveal-from-right', viewProps: {celebrity: props.celebrity } }) },
       }
     }
   },
 
   render: function () {
-    const celebrity = data.celebrities[0];
-    const diet = celebrity.diet;
-    const shoppingList = diet.shoppingList;
+    const celebrity = this.props.celebrity;
+    const shoppingList = this.props.celebrity.diet.shoppingList;
 
     return (
       <Container scrollable className="shopping-list">
