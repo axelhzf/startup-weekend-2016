@@ -57,13 +57,14 @@ module.exports = React.createClass({
 						{this.renderRecipe("Dinner", recipes.dinner[0])}
 					</div>
 
-					<Link to="tabs:celebrity" transition="show-from-right" viewProps={{ diet: diet }}>
+					<Link to="tabs:shopping-list" transition="show-from-right" viewProps={{ celebrity }}>
 						<UI.Button type="primary">
 							Shopping List
 						</UI.Button>
 					</Link>
 
 				</UI.Group>
+
 
 
 			</Container>
