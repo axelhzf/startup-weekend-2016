@@ -66,13 +66,14 @@ module.exports = React.createClass({
 							/>
 						</UI.GroupInner>
 					</UI.GroupBody>
+				</UI.Group>
 
+				<UI.Group>
 					<Link to="tabs:recipes" transition="show-from-right" viewProps={{ diet: diet }}>
 						<UI.Button type="primary">
 							Subscribe to diet
 						</UI.Button>
 					</Link>
-
 				</UI.Group>
 
 
