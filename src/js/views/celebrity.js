@@ -58,8 +58,8 @@ module.exports = React.createClass({
 						<UI.GroupInner>
 							<PieChart
 								data={diet.nutritionalSummary}
-								width={350}
-								height={350}
+								width={280}
+								height={280}
 								radius={70}
 								innerRadius={10}
 								sectorBorderColor="white"
